@@ -1,0 +1,10 @@
+name: load iris new data pipeline
+description: it is new way
+inputs:
+- {name: data_path, type: String, default: './Iris.csv'}
+implementation:
+  container:
+    image: tiktakdad/iris-preprocessing:0.5
+    command:
+    - --data_path
+    - {inputValue: data_path}
